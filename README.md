@@ -1,4 +1,3 @@
-# api-quiz
+## Comando para rodar o servidor
 
-Comando para rodar a Api
-#npm run dev
+- npm run dev
