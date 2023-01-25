@@ -1,5 +1,10 @@
 ## Ao clonar o projeto
-- npm install
+- copiar o .env-example para .env
+- preencha .env com as credenciais corretas de acesso
+- rode: npm install para instalar as dependencias
+
+## Restorage banco de dados
+O backup está dentro da pasta database
 
 ## Para rodar o servidor
 - npm run dev
