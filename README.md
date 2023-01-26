@@ -1,6 +1,6 @@
 ## Ao clonar o projeto
 
-- copiar o .env-example para .env
+- crie uma copia do .env-example e o renomeie-o para .env
 - preencha .env com as credenciais corretas de acesso
 - rode: npm install para instalar as dependencias
 
