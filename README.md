@@ -11,3 +11,8 @@ O backup está dentro da pasta src/database
 ## Para rodar o servidor
 
 - npm run dev
+
+## Rotas da aplicação
+
+- GET localhost:3001/api/perguntas
+- Lista todas as perguntas do banco de dados
