@@ -1,10 +1,13 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const routes = require('./src/routes')
 
-const app = express()
+const server = express()
 
-app.listen(3000)
+server.listen(process.env.API_PORT, () => {
+    console.log(`Servidor está funcionando na porta:${process.env.API_PORT}`)
+});
 
-app.use(cors())
-app.use('/api', routes)
+server.use(cors())
+server.use('/api', routes)
