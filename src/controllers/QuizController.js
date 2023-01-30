@@ -1,12 +1,15 @@
-const { Perguntas } = require('../database/models/Perguntas');
-const { Respostas } = require('../database/models/Respostas');
+const PerguntasService = require('../services/PerguntasService')
 
 module.exports = {
-    async listarTodasPerguntasEhRespostas(req, res) {
+    async listarTodasPerguntasComRespostas(req, res) {
         res.json(
-            await Perguntas.findAll({
-                include: Respostas
-            })
+            await PerguntasService.listar()
+        )
+    },
+
+    async salvarPergunta(req, res) {
+        res.json(
+            await PerguntasService.salvar(req, res)
         )
     }
 }

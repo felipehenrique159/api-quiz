@@ -10,4 +10,5 @@ server.listen(process.env.API_PORT, () => {
 });
 
 server.use(cors())
+server.use(express.json())
 server.use('/api', routes)
