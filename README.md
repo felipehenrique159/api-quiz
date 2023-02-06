@@ -6,7 +6,7 @@
 
 ## Restorage banco de dados
 
-O backup está dentro da pasta src/database
+O backup chama-se dump_quiz.sql, está dentro da pasta src/database
 
 ## Para rodar o servidor
 
