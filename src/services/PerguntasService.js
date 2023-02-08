@@ -1,11 +1,10 @@
 const Joi = require('joi');
-const { Perguntas } = require('..//models/Perguntas');
-const { Respostas } = require('../models/Respostas');
+const { Perguntas } = require('../models/Perguntas');
 
 module.exports = {
     async listar(req, res) {
         return await Perguntas.findAll({
-            include: Respostas
+            include: 'respostasPergunta'
         })
     },
 
@@ -19,11 +18,10 @@ module.exports = {
 
         return await Perguntas.create({
             pergunta: req.body.pergunta,
-            respostas: req.body.respostas
+            respostasPergunta: req.body.respostas
         }, {
             include: [{
-                association: Perguntas.hasMany(Respostas, { as: 'respostas' }),
-                as: 'respostas'
+                association: 'respostasPergunta'
             }]
         })
     },

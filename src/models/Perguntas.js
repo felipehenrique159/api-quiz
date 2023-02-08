@@ -19,9 +19,8 @@ const Perguntas = conexaoDb.sequelize.define('Perguntas', {
 });
 
 Perguntas.hasMany(Respostas, {
-    foreignKey: {
-        name : 'id_pergunta'
-    }
+    foreignKey: 'id_pergunta',
+    as: 'respostasPergunta'
 });
 
 module.exports = {

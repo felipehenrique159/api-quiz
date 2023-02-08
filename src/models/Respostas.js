@@ -12,7 +12,7 @@ const Respostas = conexaoDb.sequelize.define('Respostas', {
         type: DataTypes.TEXT,
         allowNull: false
     },
-    PerguntaId: {
+    id_pergunta: {
         type: DataTypes.INTEGER,
         allowNull: false,
         field : 'id_pergunta'
