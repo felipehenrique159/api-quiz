@@ -17,7 +17,7 @@ const Respostas = conexaoDb.sequelize.define('Respostas', {
         allowNull: false,
         field : 'id_pergunta'
     },
-    RespostaCerta: {
+    resposta_certa: {
         type: DataTypes.INTEGER,
         allowNull: false,
         field : 'resposta_certa'
