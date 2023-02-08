@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const conexaoDb = require('../conexaoDb');
+const conexaoDb = require('../database/conexaoDb');
 const { Respostas } = require("./Respostas");
 
 const Perguntas = conexaoDb.sequelize.define('Perguntas', {

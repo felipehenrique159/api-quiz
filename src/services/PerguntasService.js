@@ -1,6 +1,6 @@
 const Joi = require('joi');
-const { Perguntas } = require('../database/models/Perguntas');
-const { Respostas } = require('../database/models/Respostas');
+const { Perguntas } = require('..//models/Perguntas');
+const { Respostas } = require('../models/Respostas');
 
 module.exports = {
     async listar(req, res) {
