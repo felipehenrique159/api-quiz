@@ -4,5 +4,6 @@ const QuizController = require('./controllers/QuizController')
 
 routes.get('/perguntas', QuizController.listarTodasPerguntasComRespostas)
 routes.post('/perguntas', QuizController.salvarPergunta)
+routes.delete('/perguntas/:id', QuizController.excluirPerguntaComRespostas)
 
 module.exports = routes

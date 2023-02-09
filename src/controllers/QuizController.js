@@ -11,5 +11,11 @@ module.exports = {
         res.json(
             await PerguntasService.salvar(req, res)
         )
+    },
+
+    async excluirPerguntaComRespostas(req, res) {
+        res.json(
+            await PerguntasService.excluir(req.params.id)
+        )
     }
 }

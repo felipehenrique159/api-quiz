@@ -1,5 +1,6 @@
 const Joi = require('joi');
 const { Perguntas } = require('../models/Perguntas');
+const { Respostas } = require('../models/Respostas');
 
 module.exports = {
     async listar(req, res) {
@@ -41,5 +42,19 @@ module.exports = {
         });
 
         return error
+    },
+
+    async excluir(id) {
+        await Respostas.destroy({
+            where: {
+                id_pergunta : id
+            }
+        })
+
+        await Perguntas.destroy({
+            where: {
+                id : id
+            }
+        })
     }
 }
