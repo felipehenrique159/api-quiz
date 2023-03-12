@@ -1,5 +1,5 @@
 const { DataTypes } = require("sequelize");
-const conexaoDb = require('../database/conexaoDb')
+const conexaoDb = require('../database/conexaoDb');
 
 const Respostas = conexaoDb.sequelize.define('Respostas', {
     id: {

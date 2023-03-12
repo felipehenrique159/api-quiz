@@ -1,6 +1,5 @@
 const Joi = require('joi');
 const { Perguntas } = require('../models/Perguntas');
-const { Respostas } = require('../models/Respostas');
 
 module.exports = {
     async listar(req, res) {
@@ -13,8 +12,7 @@ module.exports = {
         let bodyValidate = await this.validarBodySalvar(req.body)
 
         if (bodyValidate) {
-            res.json(bodyValidate.message)
-            return
+            return bodyValidate.message
         }
 
         return await Perguntas.create({
@@ -45,16 +43,16 @@ module.exports = {
     },
 
     async excluir(id) {
-        await Respostas.destroy({
-            where: {
-                id_pergunta : id
-            }
-        })
+        if (!await Perguntas.findByPk(id)) {
+            return `Pergunta com o id ${id} não encontrada!`
+        }
 
         await Perguntas.destroy({
             where: {
                 id : id
             }
         })
+
+        return `Pergunta com o id ${id} excluída com sucesso!`
     }
 }

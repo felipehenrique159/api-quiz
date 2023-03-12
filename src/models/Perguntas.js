@@ -23,6 +23,11 @@ Perguntas.hasMany(Respostas, {
     as: 'respostasPergunta'
 });
 
+Respostas.belongsTo(Perguntas, {
+    foreignKey: 'id_pergunta',
+    as: 'perguntaResposta'
+  });
+
 module.exports = {
     Perguntas
 }
